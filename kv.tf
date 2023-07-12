@@ -1,7 +1,7 @@
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "akv_svcfoundry" {
-  count = var.create_kv == true ? 1 : 0
+  count                       = var.create_kv == true ? 1 : 0
   name                        = "tfy-svcfoundry"
   location                    = var.location
   resource_group_name         = var.resource_group_name

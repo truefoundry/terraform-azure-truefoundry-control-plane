@@ -3,7 +3,7 @@ output "truefoundry_db_name" {
 }
 
 output "truefoundry_db_endpoint" {
-  value = var.create_db == true ? module.postgresql-db[0].server_fqdn: "dummy"
+  value = var.create_db == true ? module.postgresql-db[0].server_fqdn : "dummy"
 }
 
 output "truefoundry_db_private_ip" {
@@ -11,7 +11,7 @@ output "truefoundry_db_private_ip" {
 }
 
 output "truefoundry_db_password" {
-  value = var.create_db == true ? module.postgresql-db[0].administrator_password: "dummy"
+  value     = var.create_db == true ? module.postgresql-db[0].administrator_password : "dummy"
   sensitive = true
 }
 

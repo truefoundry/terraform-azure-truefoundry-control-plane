@@ -29,7 +29,7 @@ variable "tags" {
 
 variable "cluster_oidc_url" {
   description = "OIDC url for the cluster to create federated credential for"
-  type = string
+  type        = string
 }
 
 ##### Control Plane Components 
@@ -37,19 +37,19 @@ variable "cluster_oidc_url" {
 #### Database
 
 variable "create_db" {
-  type = bool
+  type        = bool
   description = "Create db"
-  default = false
+  default     = false
 }
 
 variable "truefoundry_db_enable_override" {
-  type = bool
+  type        = bool
   description = "Truefoundry db name override to be enabled"
-  default = false
+  default     = false
 }
 
 variable "truefoundry_db_override_name" {
-  type = string
+  type        = string
   description = "Truefoundry db name override"
 }
 
@@ -64,58 +64,58 @@ variable "truefoundry_db_allocated_storage" {
 }
 
 variable "truefoundry_db_subnet_id" {
-  type = string
+  type        = string
   description = "ID of the subnet which the db should use"
 }
 
 #### Azure Container Repository
 
 variable "create_acr" {
-  type = bool
+  type        = bool
   description = "Create acr"
-  default = false
+  default     = false
 }
 
 #### Azure KeyVault
 
 variable "create_kv" {
-  type = bool
+  type        = bool
   description = "Create kv"
-  default = false
+  default     = false
 }
 
 #### Azure Storage
 
 variable "create_blob_storage" {
-  type = bool
+  type        = bool
   description = "Create blob storage"
-  default = false
+  default     = false
 }
 
 ###### mlfoundry
 
 variable "mlfoundry_svc_acc" {
   description = "Name of the mlfoundry service account"
-  default = "mlfoundry-server"
-  type = string
+  default     = "mlfoundry-server"
+  type        = string
 }
 
 variable "mlfoundry_namespace" {
   description = "Name of the mlfoundry namespace"
-  default = "truefoundry"
-  type = string
+  default     = "truefoundry"
+  type        = string
 }
 
 ###### svcfoundry
 
 variable "svcfoundry_svc_acc" {
   description = "Name of the svcfoundry service account"
-  default = "servicefoundry-server"
-  type = string
+  default     = "servicefoundry-server"
+  type        = string
 }
 
 variable "svcfoundry_namespace" {
   description = "Name of the svcfoundry namespace"
-  default = "truefoundry"
-  type = string
+  default     = "truefoundry"
+  type        = string
 }
