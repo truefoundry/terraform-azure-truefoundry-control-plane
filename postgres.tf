@@ -7,7 +7,7 @@ resource "random_password" "truefoundry_db_password" {
 module "postgresql-db" {
   count                            = var.create_db == true ? 1 : 0
   source                           = "Azure/postgresql/azurerm"
-  version                          = "3.0.0"
+  version                          = "3.1.1"
   server_name                      = var.truefoundry_db_enable_override ? var.truefoundry_db_override_name : "${var.unique_name}-db"
   sku_name                         = var.truefoundry_db_instance_class
   location                         = var.location
@@ -20,7 +20,7 @@ module "postgresql-db" {
   server_version                   = "11"
   ssl_enforcement_enabled          = false
   ssl_minimal_tls_version_enforced = "TLSEnforcementDisabled"
-  db_names                         = ["truefoundry"]
+  db_names                         = [var.database_name]
   tags                             = local.tags
   public_network_access_enabled    = false
 }

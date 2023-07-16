@@ -42,6 +42,12 @@ variable "create_db" {
   default     = false
 }
 
+variable "database_name" {
+  type = string
+  description = "name of the database in postgres"
+  default = "truefoundry"
+}
+
 variable "truefoundry_db_enable_override" {
   type        = bool
   description = "Truefoundry db name override to be enabled"

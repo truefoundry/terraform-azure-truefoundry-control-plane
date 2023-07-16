@@ -1,5 +1,5 @@
 output "truefoundry_db_name" {
-  value = var.create_db == true ? module.postgresql-db[0].server_name : "dummy"
+  value = var.create_db == true ? var.database_name : "dummy"
 }
 
 output "truefoundry_db_endpoint" {
