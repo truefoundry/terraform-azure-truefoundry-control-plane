@@ -1,3 +1,7 @@
+variable "name" {
+  description = "name of the project"
+  type = string
+}
 variable "unique_name" {
   description = "Truefoundry deployment unique name"
   type        = string
@@ -42,6 +46,12 @@ variable "create_db" {
   default     = false
 }
 
+variable "postgres_version" {
+  default = "13"
+  description = "PostgreSQL version"
+  type = string
+}
+
 variable "database_name" {
   type = string
   description = "name of the database in postgres"
@@ -65,13 +75,39 @@ variable "truefoundry_db_instance_class" {
 }
 
 variable "truefoundry_db_allocated_storage" {
-  type        = string
+  type        = number
   description = "Storage for DB"
 }
 
-variable "truefoundry_db_subnet_id" {
+variable "truefoundry_db_private_dns_zone_id" {
+  description = "Private DNS zone ID"
+  type = string
+}
+
+#### Network
+variable "truefoundry_control_plane_subnet_id" {
   type        = string
-  description = "ID of the subnet which the db should use"
+  description = "id of the subnet which where our control plane is hosted"
+}
+
+variable "truefoundry_db_vnet_name" {
+  description = "name of the virtual network"
+  type = string
+}
+
+variable "truefoundry_db_subnet_cidr" {
+  type        = string
+  description = "CIDR of the subnet which we should use for the db"
+}
+
+variable "truefoundry_db_allowed_ip_range_start_ip_address" {
+  description = "starting ip address which should allow connection to database"
+  type = string
+}
+
+variable "truefoundry_db_allowed_ip_range_end_ip_address" {
+  description = "starting ip address which should allow connection to database"
+  type = string
 }
 
 #### Azure Container Repository
