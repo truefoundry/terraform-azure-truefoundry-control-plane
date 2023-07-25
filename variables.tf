@@ -98,6 +98,11 @@ variable "truefoundry_db_subnet_cidr" {
   description = "CIDR of the subnet which we should use for the db"
 }
 
+variable "truefoundry_db_private_dns_zone_id" {
+  type = string
+  description = "Private DNS zone ID"
+}
+
 #### Azure Container Repository
 
 variable "create_acr" {
