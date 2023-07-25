@@ -3,7 +3,7 @@ output "truefoundry_db_name" {
 }
 
 output "truefoundry_db_fqdn" {
-  value = var.create_db == true ? resource.azurerm_postgresql_flexible_server.postgresql_flexible[0].fqdn  : "dummy"
+  value = var.create_db == true ? resource.azurerm_postgresql_flexible_server.postgresql_flexible[0].fqdn : "dummy"
 }
 
 output "truefoundry_db_password" {
