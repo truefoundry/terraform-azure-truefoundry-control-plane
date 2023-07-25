@@ -89,7 +89,7 @@ variable "truefoundry_db_subnet_id" {
 
 #### Network
 variable "truefoundry_db_vnet_name" {
-  description = "name of the virtual network"
+  description = "Name of the virtual network"
   type        = string
 }
 
