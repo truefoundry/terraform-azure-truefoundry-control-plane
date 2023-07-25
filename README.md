@@ -65,7 +65,7 @@ No modules.
 | <a name="input_truefoundry_db_subnet_cidr"></a> [truefoundry\_db\_subnet\_cidr](#input\_truefoundry\_db\_subnet\_cidr) | CIDR of the subnet which we should use for the db | `string` | n/a | yes |
 | <a name="input_truefoundry_db_subnet_id"></a> [truefoundry\_db\_subnet\_id](#input\_truefoundry\_db\_subnet\_id) | Subnet ID where truefoundry database is hosted | `bool` | `""` | no |
 | <a name="input_truefoundry_db_subnet_shim"></a> [truefoundry\_db\_subnet\_shim](#input\_truefoundry\_db\_subnet\_shim) | DB subnet shim | `bool` | n/a | yes |
-| <a name="input_truefoundry_db_vnet_name"></a> [truefoundry\_db\_vnet\_name](#input\_truefoundry\_db\_vnet\_name) | name of the virtual network | `string` | n/a | yes |
+| <a name="input_truefoundry_db_vnet_name"></a> [truefoundry\_db\_vnet\_name](#input\_truefoundry\_db\_vnet\_name) | Name of the virtual network | `string` | n/a | yes |
 | <a name="input_unique_name"></a> [unique\_name](#input\_unique\_name) | Truefoundry deployment unique name | `string` | n/a | yes |
 
 ## Outputs
