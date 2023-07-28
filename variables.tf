@@ -99,7 +99,7 @@ variable "truefoundry_db_subnet_cidr" {
 }
 
 variable "truefoundry_db_private_dns_zone_id" {
-  type = string
+  type        = string
   description = "Private DNS zone ID"
 }
 
