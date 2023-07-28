@@ -82,7 +82,7 @@ variable "truefoundry_db_subnet_shim" {
 }
 
 variable "truefoundry_db_subnet_id" {
-  type        = bool
+  type        = string
   description = "Subnet ID where truefoundry database is hosted"
   default     = ""
 }
