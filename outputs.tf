@@ -1,22 +1,26 @@
 output "truefoundry_db_name" {
-  value = var.create_db == true ? module.postgresql-db[0].server_name : "dummy"
+  value = var.create_db == true ? var.database_name : "dummy"
 }
 
-output "truefoundry_db_endpoint" {
-  value = var.create_db == true ? module.postgresql-db[0].server_fqdn : "dummy"
-}
-
-output "truefoundry_db_private_ip" {
-  value = var.create_db == true ? resource.azurerm_private_endpoint.postgresql_private_connection[0].private_service_connection[0].private_ip_address : "dummy"
+output "truefoundry_db_fqdn" {
+  value = var.create_db == true ? resource.azurerm_postgresql_flexible_server.postgresql_flexible[0].fqdn : "dummy"
 }
 
 output "truefoundry_db_password" {
-  value     = var.create_db == true ? module.postgresql-db[0].administrator_password : "dummy"
+  value     = var.create_db == true ? random_password.truefoundry_db_password.result : "dummy"
   sensitive = true
+}
+
+output "truefoundry_db_username" {
+  value = var.create_db == true ? local.truefoundry_db_master_username : "dummy"
 }
 
 output "truefoundry_db_port" {
   value = "5432"
+}
+
+output "truefoundry_db_subnet_id" {
+  value = var.create_db == true ? azurerm_subnet.postgresql_flexible_subnet.id : "dummy"
 }
 
 output "truefoundry_storage_container_id" {

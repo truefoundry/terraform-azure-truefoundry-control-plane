@@ -38,8 +38,20 @@ variable "cluster_oidc_url" {
 
 variable "create_db" {
   type        = bool
-  description = "Create db"
-  default     = false
+  description = "Create postgres flexible server database or not"
+  default     = true
+}
+
+variable "postgres_version" {
+  default     = "13"
+  description = "PostgreSQL version"
+  type        = string
+}
+
+variable "database_name" {
+  type        = string
+  description = "Name of the database in postgres"
+  default     = "truefoundry"
 }
 
 variable "truefoundry_db_enable_override" {
@@ -59,13 +71,36 @@ variable "truefoundry_db_instance_class" {
 }
 
 variable "truefoundry_db_allocated_storage" {
-  type        = string
+  type        = number
   description = "Storage for DB"
 }
 
+### Database subnet SHIM
+variable "truefoundry_db_subnet_shim" {
+  type        = bool
+  description = "DB subnet shim"
+}
+
 variable "truefoundry_db_subnet_id" {
+  type        = bool
+  description = "Subnet ID where truefoundry database is hosted"
+  default     = ""
+}
+
+#### Network
+variable "truefoundry_db_vnet_name" {
+  description = "Name of the virtual network"
   type        = string
-  description = "ID of the subnet which the db should use"
+}
+
+variable "truefoundry_db_subnet_cidr" {
+  type        = string
+  description = "CIDR of the subnet which we should use for the db"
+}
+
+variable "truefoundry_db_private_dns_zone_id" {
+  type = string
+  description = "Private DNS zone ID"
 }
 
 #### Azure Container Repository

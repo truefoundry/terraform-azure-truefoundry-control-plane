@@ -9,7 +9,7 @@ locals {
 
   tags = merge(
     {
-      "terraform-module" = "terraform-azc-truefoundry"
+      "terraform-module" = "terraform-truefoundry-control-plane"
       "terraform"        = "true"
     },
     var.tags
