@@ -103,6 +103,15 @@ variable "truefoundry_db_private_dns_zone_id" {
   description = "Private DNS zone ID"
 }
 
+variable "truefoundry_db_allowed_ip_range_start_ip_address" {
+  type        = string
+  description = "IP range start address which is allowed to connect to DB"
+}
+variable "truefoundry_db_allowed_ip_range_end_ip_address" {
+  type        = string
+  description = "IP range end address which is allowed to connect to DB"
+}
+
 #### Azure Container Repository
 
 variable "create_acr" {
