@@ -59,6 +59,8 @@ No modules.
 | <a name="input_svcfoundry_svc_acc"></a> [svcfoundry\_svc\_acc](#input\_svcfoundry\_svc\_acc) | Name of the svcfoundry service account | `string` | `"servicefoundry-server"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | AWS Tags common to all the resources created | `map(string)` | `{}` | no |
 | <a name="input_truefoundry_db_allocated_storage"></a> [truefoundry\_db\_allocated\_storage](#input\_truefoundry\_db\_allocated\_storage) | Storage for DB | `number` | n/a | yes |
+| <a name="input_truefoundry_db_allowed_ip_range_end_ip_address"></a> [truefoundry\_db\_allowed\_ip\_range\_end\_ip\_address](#input\_truefoundry\_db\_allowed\_ip\_range\_end\_ip\_address) | IP range end address which is allowed to connect to DB | `string` | n/a | yes |
+| <a name="input_truefoundry_db_allowed_ip_range_start_ip_address"></a> [truefoundry\_db\_allowed\_ip\_range\_start\_ip\_address](#input\_truefoundry\_db\_allowed\_ip\_range\_start\_ip\_address) | IP range start address which is allowed to connect to DB | `string` | n/a | yes |
 | <a name="input_truefoundry_db_enable_override"></a> [truefoundry\_db\_enable\_override](#input\_truefoundry\_db\_enable\_override) | Truefoundry db name override to be enabled | `bool` | `false` | no |
 | <a name="input_truefoundry_db_instance_class"></a> [truefoundry\_db\_instance\_class](#input\_truefoundry\_db\_instance\_class) | Instance class for DB | `string` | n/a | yes |
 | <a name="input_truefoundry_db_override_name"></a> [truefoundry\_db\_override\_name](#input\_truefoundry\_db\_override\_name) | Truefoundry db name override | `string` | n/a | yes |
