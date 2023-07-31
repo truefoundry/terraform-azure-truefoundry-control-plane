@@ -20,7 +20,7 @@ output "truefoundry_db_port" {
 }
 
 output "truefoundry_db_subnet_id" {
-  value = var.create_db == true ? azurerm_subnet.postgresql_flexible_subnet.id : "dummy"
+  value = var.create_db == true ? azurerm_subnet.postgresql_flexible_subnet[0].id : "dummy"
 }
 
 output "truefoundry_storage_container_id" {

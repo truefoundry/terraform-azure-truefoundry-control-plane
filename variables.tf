@@ -82,7 +82,7 @@ variable "truefoundry_db_subnet_shim" {
 }
 
 variable "truefoundry_db_subnet_id" {
-  type        = bool
+  type        = string
   description = "Subnet ID where truefoundry database is hosted"
   default     = ""
 }
@@ -99,8 +99,17 @@ variable "truefoundry_db_subnet_cidr" {
 }
 
 variable "truefoundry_db_private_dns_zone_id" {
-  type = string
+  type        = string
   description = "Private DNS zone ID"
+}
+
+variable "truefoundry_db_allowed_ip_range_start_ip_address" {
+  type        = string
+  description = "IP range start address which is allowed to connect to DB"
+}
+variable "truefoundry_db_allowed_ip_range_end_ip_address" {
+  type        = string
+  description = "IP range end address which is allowed to connect to DB"
 }
 
 #### Azure Container Repository
