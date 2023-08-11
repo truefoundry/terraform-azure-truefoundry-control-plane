@@ -75,18 +75,6 @@ variable "truefoundry_db_allocated_storage" {
   description = "Storage for DB"
 }
 
-### Database subnet SHIM
-variable "truefoundry_db_subnet_shim" {
-  type        = bool
-  description = "DB subnet shim"
-}
-
-variable "truefoundry_db_subnet_id" {
-  type        = string
-  description = "Subnet ID where truefoundry database is hosted"
-  default     = ""
-}
-
 #### Network
 variable "truefoundry_db_vnet_name" {
   description = "Name of the virtual network"
