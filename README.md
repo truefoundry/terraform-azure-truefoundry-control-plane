@@ -4,14 +4,18 @@ Truefoundry Azure Control Plane Module
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.69.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | 3.5.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
-| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.69.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
 
 ## Modules
 
@@ -21,24 +25,24 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azurerm_container_registry.svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry) | resource |
-| [azurerm_federated_identity_credential.mlfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/federated_identity_credential) | resource |
-| [azurerm_federated_identity_credential.svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/federated_identity_credential) | resource |
-| [azurerm_key_vault.akv_svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault) | resource |
-| [azurerm_postgresql_flexible_server.postgresql_flexible](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_flexible_server) | resource |
-| [azurerm_postgresql_flexible_server_configuration.postgres_flexible_configuration](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_flexible_server_configuration) | resource |
-| [azurerm_postgresql_flexible_server_database.postgresql_flexible_database](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_flexible_server_database) | resource |
-| [azurerm_postgresql_flexible_server_firewall_rule.postgres_flexible_firewall_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_flexible_server_firewall_rule) | resource |
-| [azurerm_role_assignment.acr_svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
-| [azurerm_role_assignment.mlfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
-| [azurerm_role_assignment.storage_svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
-| [azurerm_storage_account.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
-| [azurerm_storage_container.truefoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) | resource |
-| [azurerm_subnet.postgresql_flexible_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet) | resource |
-| [azurerm_user_assigned_identity.mlfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
-| [azurerm_user_assigned_identity.svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
-| [random_password.truefoundry_db_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
-| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
+| [azurerm_container_registry.svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/container_registry) | resource |
+| [azurerm_federated_identity_credential.mlfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/federated_identity_credential) | resource |
+| [azurerm_federated_identity_credential.svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/federated_identity_credential) | resource |
+| [azurerm_key_vault.akv_svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/key_vault) | resource |
+| [azurerm_postgresql_flexible_server.postgresql_flexible](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/postgresql_flexible_server) | resource |
+| [azurerm_postgresql_flexible_server_configuration.postgres_flexible_configuration](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/postgresql_flexible_server_configuration) | resource |
+| [azurerm_postgresql_flexible_server_database.postgresql_flexible_database](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/postgresql_flexible_server_database) | resource |
+| [azurerm_postgresql_flexible_server_firewall_rule.postgres_flexible_firewall_rule](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/postgresql_flexible_server_firewall_rule) | resource |
+| [azurerm_role_assignment.acr_svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/role_assignment) | resource |
+| [azurerm_role_assignment.mlfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/role_assignment) | resource |
+| [azurerm_role_assignment.storage_svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/role_assignment) | resource |
+| [azurerm_storage_account.this](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/storage_account) | resource |
+| [azurerm_storage_container.truefoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/storage_container) | resource |
+| [azurerm_subnet.postgresql_flexible_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subnet) | resource |
+| [azurerm_user_assigned_identity.mlfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/user_assigned_identity) | resource |
+| [azurerm_user_assigned_identity.svcfoundry](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/user_assigned_identity) | resource |
+| [random_password.truefoundry_db_password](https://registry.terraform.io/providers/hashicorp/random/3.5.1/docs/resources/password) | resource |
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/client_config) | data source |
 
 ## Inputs
 
@@ -66,8 +70,6 @@ No modules.
 | <a name="input_truefoundry_db_override_name"></a> [truefoundry\_db\_override\_name](#input\_truefoundry\_db\_override\_name) | Truefoundry db name override | `string` | n/a | yes |
 | <a name="input_truefoundry_db_private_dns_zone_id"></a> [truefoundry\_db\_private\_dns\_zone\_id](#input\_truefoundry\_db\_private\_dns\_zone\_id) | Private DNS zone ID | `string` | n/a | yes |
 | <a name="input_truefoundry_db_subnet_cidr"></a> [truefoundry\_db\_subnet\_cidr](#input\_truefoundry\_db\_subnet\_cidr) | CIDR of the subnet which we should use for the db | `string` | n/a | yes |
-| <a name="input_truefoundry_db_subnet_id"></a> [truefoundry\_db\_subnet\_id](#input\_truefoundry\_db\_subnet\_id) | Subnet ID where truefoundry database is hosted | `string` | `""` | no |
-| <a name="input_truefoundry_db_subnet_shim"></a> [truefoundry\_db\_subnet\_shim](#input\_truefoundry\_db\_subnet\_shim) | DB subnet shim | `bool` | n/a | yes |
 | <a name="input_truefoundry_db_vnet_name"></a> [truefoundry\_db\_vnet\_name](#input\_truefoundry\_db\_vnet\_name) | Name of the virtual network | `string` | n/a | yes |
 | <a name="input_unique_name"></a> [unique\_name](#input\_unique\_name) | Truefoundry deployment unique name | `string` | n/a | yes |
 
