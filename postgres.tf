@@ -57,7 +57,7 @@ resource "azurerm_postgresql_flexible_server_configuration" "postgres_flexible_c
   count     = var.create_db ? 1 : 0
   name      = "require_secure_transport"
   server_id = azurerm_postgresql_flexible_server.postgresql_flexible[0].id
-  value     = "OFF"
+  value     = var.truefoundry_db_require_ssl ? "ON" : "OFF"
 }
 
 resource "azurerm_postgresql_flexible_server_firewall_rule" "postgres_flexible_firewall_rule" {

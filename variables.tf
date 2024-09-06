@@ -75,6 +75,12 @@ variable "truefoundry_db_allocated_storage" {
   description = "Storage for DB"
 }
 
+variable "truefoundry_db_require_ssl" {
+  type        = bool
+  description = "Require SSL for DB"
+  default     = true
+}
+
 #### Network
 variable "truefoundry_db_vnet_name" {
   description = "Name of the virtual network"
@@ -95,6 +101,7 @@ variable "truefoundry_db_allowed_ip_range_start_ip_address" {
   type        = string
   description = "IP range start address which is allowed to connect to DB"
 }
+
 variable "truefoundry_db_allowed_ip_range_end_ip_address" {
   type        = string
   description = "IP range end address which is allowed to connect to DB"
