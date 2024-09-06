@@ -78,7 +78,7 @@ variable "truefoundry_db_allocated_storage" {
 variable "truefoundry_db_require_ssl" {
   type        = bool
   description = "Require SSL for DB"
-  default     = true
+  default     = false
 }
 
 #### Network
