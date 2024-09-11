@@ -69,6 +69,7 @@ No modules.
 | <a name="input_truefoundry_db_instance_class"></a> [truefoundry\_db\_instance\_class](#input\_truefoundry\_db\_instance\_class) | Instance class for DB | `string` | n/a | yes |
 | <a name="input_truefoundry_db_override_name"></a> [truefoundry\_db\_override\_name](#input\_truefoundry\_db\_override\_name) | Truefoundry db name override | `string` | n/a | yes |
 | <a name="input_truefoundry_db_private_dns_zone_id"></a> [truefoundry\_db\_private\_dns\_zone\_id](#input\_truefoundry\_db\_private\_dns\_zone\_id) | Private DNS zone ID | `string` | n/a | yes |
+| <a name="input_truefoundry_db_require_ssl"></a> [truefoundry\_db\_require\_ssl](#input\_truefoundry\_db\_require\_ssl) | Require SSL for DB | `bool` | `false` | no |
 | <a name="input_truefoundry_db_subnet_cidr"></a> [truefoundry\_db\_subnet\_cidr](#input\_truefoundry\_db\_subnet\_cidr) | CIDR of the subnet which we should use for the db | `string` | n/a | yes |
 | <a name="input_truefoundry_db_vnet_name"></a> [truefoundry\_db\_vnet\_name](#input\_truefoundry\_db\_vnet\_name) | Name of the virtual network | `string` | n/a | yes |
 | <a name="input_unique_name"></a> [unique\_name](#input\_unique\_name) | Truefoundry deployment unique name | `string` | n/a | yes |
