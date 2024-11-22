@@ -1,19 +1,20 @@
-variable "unique_name" {
-  description = "Truefoundry deployment unique name"
-  type        = string
-  validation {
-    condition     = length(var.unique_name) <= 24
-    error_message = "Error: Unique name is too long."
-  }
-  validation {
-    condition     = length(var.unique_name) >= 3
-    error_message = "Error: Unique name is too short."
-  }
-}
+
+################################################################################
+# Common
+################################################################################
 
 variable "resource_group_name" {
   description = "Name of the resource group"
   type        = string
+}
+
+variable "cluster_name" {
+  description = "Cluster name"
+  type        = string
+  validation {
+    condition     = length(var.cluster_name) <= 24 || length(var.cluster_name) >= 3
+    error_message = "Error: 3 <= len(cluster_name) <= 24"
+  }
 }
 
 variable "location" {
@@ -32,9 +33,9 @@ variable "cluster_oidc_url" {
   type        = string
 }
 
-##### Control Plane Components 
-
-#### Database
+################################################################################
+# Database
+################################################################################
 
 variable "create_db" {
   type        = bool
@@ -63,16 +64,19 @@ variable "truefoundry_db_enable_override" {
 variable "truefoundry_db_override_name" {
   type        = string
   description = "Truefoundry db name override"
+  default     = ""
 }
 
 variable "truefoundry_db_instance_class" {
   type        = string
   description = "Instance class for DB"
+  default     = "GP_Standard_D4ds_v5"
 }
 
 variable "truefoundry_db_allocated_storage" {
   type        = number
   description = "Storage for DB"
+  default     = 32768
 }
 
 variable "truefoundry_db_require_ssl" {
@@ -81,7 +85,6 @@ variable "truefoundry_db_require_ssl" {
   default     = false
 }
 
-#### Network
 variable "truefoundry_db_vnet_name" {
   description = "Name of the virtual network"
   type        = string
@@ -107,7 +110,9 @@ variable "truefoundry_db_allowed_ip_range_end_ip_address" {
   description = "IP range end address which is allowed to connect to DB"
 }
 
-#### Azure Container Repository
+################################################################################
+# Container Registry
+################################################################################
 
 variable "create_acr" {
   type        = bool
@@ -115,7 +120,9 @@ variable "create_acr" {
   default     = false
 }
 
-#### Azure KeyVault
+################################################################################
+# Key vault
+################################################################################
 
 variable "create_kv" {
   type        = bool
@@ -123,7 +130,9 @@ variable "create_kv" {
   default     = false
 }
 
-#### Azure Storage
+################################################################################
+# Storage account
+################################################################################
 
 variable "create_blob_storage" {
   type        = bool
@@ -131,7 +140,9 @@ variable "create_blob_storage" {
   default     = false
 }
 
-###### mlfoundry
+################################################################################
+# Mlfoundry-server
+################################################################################
 
 variable "mlfoundry_svc_acc" {
   description = "Name of the mlfoundry service account"
@@ -145,7 +156,9 @@ variable "mlfoundry_namespace" {
   type        = string
 }
 
-###### svcfoundry
+################################################################################
+# Servicefoundry-server
+################################################################################
 
 variable "svcfoundry_svc_acc" {
   description = "Name of the svcfoundry service account"

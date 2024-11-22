@@ -6,7 +6,7 @@ resource "random_password" "truefoundry_db_password" {
 
 resource "azurerm_subnet" "postgresql_flexible_subnet" {
   count                = var.create_db ? 1 : 0
-  name                 = replace("${var.unique_name}-postgres", "-", "")
+  name                 = replace("${var.cluster_name}-postgres", "-", "")
   resource_group_name  = var.resource_group_name
   virtual_network_name = var.truefoundry_db_vnet_name
   address_prefixes     = [var.truefoundry_db_subnet_cidr]
@@ -24,18 +24,19 @@ resource "azurerm_subnet" "postgresql_flexible_subnet" {
 
 resource "azurerm_postgresql_flexible_server" "postgresql_flexible" {
   count               = var.create_db ? 1 : 0
-  name                = var.truefoundry_db_enable_override ? var.truefoundry_db_override_name : "${var.unique_name}-psql"
+  name                = var.truefoundry_db_enable_override ? var.truefoundry_db_override_name : "${var.cluster_name}-psql"
   resource_group_name = var.resource_group_name
   location            = var.location
   version             = var.postgres_version
   authentication {
     password_auth_enabled = true
   }
-  administrator_login    = local.truefoundry_db_master_username
-  administrator_password = random_password.truefoundry_db_password.result
-  delegated_subnet_id    = azurerm_subnet.postgresql_flexible_subnet[0].id
-  private_dns_zone_id    = var.truefoundry_db_private_dns_zone_id
-  zone                   = "3"
+  administrator_login           = local.truefoundry_db_master_username
+  administrator_password        = random_password.truefoundry_db_password.result
+  public_network_access_enabled = false
+  delegated_subnet_id           = azurerm_subnet.postgresql_flexible_subnet[0].id
+  private_dns_zone_id           = var.truefoundry_db_private_dns_zone_id
+  zone                          = "3"
   high_availability {
     mode                      = "SameZone"
     standby_availability_zone = "3"
