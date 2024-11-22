@@ -48,6 +48,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name | `string` | n/a | yes |
 | <a name="input_cluster_oidc_url"></a> [cluster\_oidc\_url](#input\_cluster\_oidc\_url) | OIDC url for the cluster to create federated credential for | `string` | n/a | yes |
 | <a name="input_create_acr"></a> [create\_acr](#input\_create\_acr) | Create acr | `bool` | `false` | no |
 | <a name="input_create_blob_storage"></a> [create\_blob\_storage](#input\_create\_blob\_storage) | Create blob storage | `bool` | `false` | no |
@@ -62,17 +63,16 @@ No modules.
 | <a name="input_svcfoundry_namespace"></a> [svcfoundry\_namespace](#input\_svcfoundry\_namespace) | Name of the svcfoundry namespace | `string` | `"truefoundry"` | no |
 | <a name="input_svcfoundry_svc_acc"></a> [svcfoundry\_svc\_acc](#input\_svcfoundry\_svc\_acc) | Name of the svcfoundry service account | `string` | `"servicefoundry-server"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | AWS Tags common to all the resources created | `map(string)` | `{}` | no |
-| <a name="input_truefoundry_db_allocated_storage"></a> [truefoundry\_db\_allocated\_storage](#input\_truefoundry\_db\_allocated\_storage) | Storage for DB | `number` | n/a | yes |
+| <a name="input_truefoundry_db_allocated_storage"></a> [truefoundry\_db\_allocated\_storage](#input\_truefoundry\_db\_allocated\_storage) | Storage for DB | `number` | `32768` | no |
 | <a name="input_truefoundry_db_allowed_ip_range_end_ip_address"></a> [truefoundry\_db\_allowed\_ip\_range\_end\_ip\_address](#input\_truefoundry\_db\_allowed\_ip\_range\_end\_ip\_address) | IP range end address which is allowed to connect to DB | `string` | n/a | yes |
 | <a name="input_truefoundry_db_allowed_ip_range_start_ip_address"></a> [truefoundry\_db\_allowed\_ip\_range\_start\_ip\_address](#input\_truefoundry\_db\_allowed\_ip\_range\_start\_ip\_address) | IP range start address which is allowed to connect to DB | `string` | n/a | yes |
 | <a name="input_truefoundry_db_enable_override"></a> [truefoundry\_db\_enable\_override](#input\_truefoundry\_db\_enable\_override) | Truefoundry db name override to be enabled | `bool` | `false` | no |
-| <a name="input_truefoundry_db_instance_class"></a> [truefoundry\_db\_instance\_class](#input\_truefoundry\_db\_instance\_class) | Instance class for DB | `string` | n/a | yes |
-| <a name="input_truefoundry_db_override_name"></a> [truefoundry\_db\_override\_name](#input\_truefoundry\_db\_override\_name) | Truefoundry db name override | `string` | n/a | yes |
+| <a name="input_truefoundry_db_instance_class"></a> [truefoundry\_db\_instance\_class](#input\_truefoundry\_db\_instance\_class) | Instance class for DB | `string` | `"GP_Standard_D4ds_v5"` | no |
+| <a name="input_truefoundry_db_override_name"></a> [truefoundry\_db\_override\_name](#input\_truefoundry\_db\_override\_name) | Truefoundry db name override | `string` | `""` | no |
 | <a name="input_truefoundry_db_private_dns_zone_id"></a> [truefoundry\_db\_private\_dns\_zone\_id](#input\_truefoundry\_db\_private\_dns\_zone\_id) | Private DNS zone ID | `string` | n/a | yes |
 | <a name="input_truefoundry_db_require_ssl"></a> [truefoundry\_db\_require\_ssl](#input\_truefoundry\_db\_require\_ssl) | Require SSL for DB | `bool` | `false` | no |
 | <a name="input_truefoundry_db_subnet_cidr"></a> [truefoundry\_db\_subnet\_cidr](#input\_truefoundry\_db\_subnet\_cidr) | CIDR of the subnet which we should use for the db | `string` | n/a | yes |
 | <a name="input_truefoundry_db_vnet_name"></a> [truefoundry\_db\_vnet\_name](#input\_truefoundry\_db\_vnet\_name) | Name of the virtual network | `string` | n/a | yes |
-| <a name="input_unique_name"></a> [unique\_name](#input\_unique\_name) | Truefoundry deployment unique name | `string` | n/a | yes |
 
 ## Outputs
 
