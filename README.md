@@ -51,7 +51,7 @@ No modules.
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Cluster name | `string` | n/a | yes |
 | <a name="input_cluster_oidc_url"></a> [cluster\_oidc\_url](#input\_cluster\_oidc\_url) | OIDC url for the cluster to create federated credential for | `string` | n/a | yes |
 | <a name="input_create_acr"></a> [create\_acr](#input\_create\_acr) | Create acr | `bool` | `false` | no |
-| <a name="input_create_blob_storage"></a> [create\_blob\_storage](#input\_create\_blob\_storage) | Create blob storage | `bool` | `false` | no |
+| <a name="input_create_blob_storage"></a> [create\_blob\_storage](#input\_create\_blob\_storage) | Create blob storage | `bool` | `true` | no |
 | <a name="input_create_db"></a> [create\_db](#input\_create\_db) | Create postgres flexible server database or not | `bool` | `true` | no |
 | <a name="input_create_kv"></a> [create\_kv](#input\_create\_kv) | Create kv | `bool` | `false` | no |
 | <a name="input_database_name"></a> [database\_name](#input\_database\_name) | Name of the database in postgres | `string` | `"truefoundry"` | no |
@@ -80,6 +80,8 @@ No modules.
 |------|-------------|
 | <a name="output_mlfoundry_identity_client_id"></a> [mlfoundry\_identity\_client\_id](#output\_mlfoundry\_identity\_client\_id) | n/a |
 | <a name="output_svcfoundry_identity_client_id"></a> [svcfoundry\_identity\_client\_id](#output\_svcfoundry\_identity\_client\_id) | n/a |
+| <a name="output_truefoundry_blob_connection_string"></a> [truefoundry\_blob\_connection\_string](#output\_truefoundry\_blob\_connection\_string) | The primary connection string for the storage account |
+| <a name="output_truefoundry_blob_uri"></a> [truefoundry\_blob\_uri](#output\_truefoundry\_blob\_uri) | The primary blob endpoint URI for the storage account |
 | <a name="output_truefoundry_db_fqdn"></a> [truefoundry\_db\_fqdn](#output\_truefoundry\_db\_fqdn) | n/a |
 | <a name="output_truefoundry_db_name"></a> [truefoundry\_db\_name](#output\_truefoundry\_db\_name) | n/a |
 | <a name="output_truefoundry_db_password"></a> [truefoundry\_db\_password](#output\_truefoundry\_db\_password) | n/a |
