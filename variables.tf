@@ -137,7 +137,7 @@ variable "create_kv" {
 variable "create_blob_storage" {
   type        = bool
   description = "Create blob storage"
-  default     = false
+  default     = true
 }
 
 ################################################################################
