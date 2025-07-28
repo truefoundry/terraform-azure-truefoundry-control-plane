@@ -42,6 +42,6 @@ output "truefoundry_blob_uri" {
 
 output "truefoundry_blob_connection_string" {
   description = "The primary connection string for the storage account"
-  value       = var.create_blob_storage ? azurerm_storage_account.this[0].primary_connection_string : "dummy"
+  value       = var.create_blob_storage ? azurerm_storage_account.this[0].primary_connection_string : ""
   sensitive   = true
 }
