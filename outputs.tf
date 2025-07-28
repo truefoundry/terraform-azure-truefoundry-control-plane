@@ -34,3 +34,14 @@ output "svcfoundry_identity_client_id" {
 output "mlfoundry_identity_client_id" {
   value = azurerm_user_assigned_identity.mlfoundry.client_id
 }
+
+output "truefoundry_blob_uri" {
+  description = "The primary blob endpoint URI for the storage account"
+  value       = var.create_blob_storage ? azurerm_storage_account.this[0].primary_blob_endpoint : ""
+}
+
+output "truefoundry_blob_connection_string" {
+  description = "The primary connection string for the storage account"
+  value       = var.create_blob_storage ? azurerm_storage_account.this[0].primary_connection_string : ""
+  sensitive   = true
+}
