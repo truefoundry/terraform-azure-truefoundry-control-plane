@@ -36,8 +36,8 @@ output "mlfoundry_identity_client_id" {
 }
 
 output "truefoundry_blob_uri" {
-  description = "The primary blob endpoint URI for the storage account"
-  value       = var.create_blob_storage ? azurerm_storage_account.this[0].primary_blob_endpoint : ""
+  description = "The blob endpoint URI including the TrueFoundry container, e.g. https://<account>.blob.core.windows.net/<container>"
+  value       = var.create_blob_storage ? "${trimsuffix(azurerm_storage_account.this[0].primary_blob_endpoint, "/")}/${azurerm_storage_container.truefoundry[0].name}" : ""
 }
 
 output "truefoundry_blob_connection_string" {

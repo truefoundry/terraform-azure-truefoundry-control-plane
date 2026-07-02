@@ -81,7 +81,7 @@ No modules.
 | <a name="output_mlfoundry_identity_client_id"></a> [mlfoundry\_identity\_client\_id](#output\_mlfoundry\_identity\_client\_id) | n/a |
 | <a name="output_svcfoundry_identity_client_id"></a> [svcfoundry\_identity\_client\_id](#output\_svcfoundry\_identity\_client\_id) | n/a |
 | <a name="output_truefoundry_blob_connection_string"></a> [truefoundry\_blob\_connection\_string](#output\_truefoundry\_blob\_connection\_string) | The primary connection string for the storage account |
-| <a name="output_truefoundry_blob_uri"></a> [truefoundry\_blob\_uri](#output\_truefoundry\_blob\_uri) | The primary blob endpoint URI for the storage account |
+| <a name="output_truefoundry_blob_uri"></a> [truefoundry\_blob\_uri](#output\_truefoundry\_blob\_uri) | The blob endpoint URI including the TrueFoundry container, e.g. https://<account>.blob.core.windows.net/<container> |
 | <a name="output_truefoundry_db_fqdn"></a> [truefoundry\_db\_fqdn](#output\_truefoundry\_db\_fqdn) | n/a |
 | <a name="output_truefoundry_db_name"></a> [truefoundry\_db\_name](#output\_truefoundry\_db\_name) | n/a |
 | <a name="output_truefoundry_db_password"></a> [truefoundry\_db\_password](#output\_truefoundry\_db\_password) | n/a |
